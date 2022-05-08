@@ -44,11 +44,6 @@ x.L76X_Send_Command(x.SET_SYNC_PPS_NMEA_ON)
 f = open('GPSData.csv','w')
 f.write("GPShr,GPSmin,GPSsec,latitude,longitude\n")
 
-#fp = open("test.txt", "w")
-#fp.write("Hello, World")
-#fp.close()
-
-
 try:
     while(1):
         x.L76X_Gat_GNRMC()
@@ -83,6 +78,6 @@ try:
 
         time.sleep(5)
 
-except (KeyboardInterrupt, SystemExit): #when you press ctrl+c
+except (KeyboardInterrupt, SystemExit): #when press ctrl+c
     print("Done.\nExiting.")
     f.close()
